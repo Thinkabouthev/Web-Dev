@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft – Cloud, Computers, Apps & Gaming</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+        body {
+            background-color: #fff;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 4%;
+            height: 54px;
+            font-size: 13px;
+        }
+        .nav-left, .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+        .nav-left img {
+            display: block; 
+            height: 23px;
+        }
+        .nav-link {
+            color: #262626;
+            text-decoration: none;
+            font-size: 13px;
+        }
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+        .payment-banner {
+            background-color: #0067b8;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            font-size: 14px;
+            margin-bottom: -43px;
+            line-height: 1;
+            display: block;
+        }
+        .payment-banner a {
+            color: white;
+            text-decoration: none;
+        }
+        .hero {
+            background: url('img/copilot.jpeg') no-repeat center center;
+            background-size: contain;
+            height: 500px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 0 4%; 
+        }
+        .hero-content {
+            position: absolute;
+            top: 12%; 
+            left: 1%;
+            background: white;
+            padding: 48px;
+            max-width: 600px;
+            height: 270px;
+            border-radius: 4px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .hero-content h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+        .shop-now-btn {
+            background-color: #0067b8;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+            border-radius: 2px;
+            text-align: left;
+        }
+        .category-nav {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            padding: 48px 0;
+            text-align: center;
+        }
+        .category-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #0067b8;
+            gap: 8px;
+        }
+        .category-icon {
+            width: 30px;
+            height: 30px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            padding: 0 84px;
+            margin-bottom: 48px;
+        }
+        .product-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            background: #f5f5f5;
+            padding: 24px;
+            border-radius: 4px;
+        }
+        .product-card img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 16px;
+        }
+        .product-card h3 {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+        .product-card p {
+            font-size: 15px;
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+        .button-container {
+            display: flex;
+            justify-content: left;
+            align-items: flex-end;
+            height: 50px;
+        }
+        .carousel-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .carousel-img {
+            width: 150px; 
+            height: auto;
+        }
+
+        .search-container {
+            position: relative;
+        }
+        .search-input {
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+        .cart-icon {
+            position: relative;
+        }
+        
+        .sign-in-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: #262626;
+        }
+        .user-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #f3f3f3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-left">
+            <img src="img/microsoft-logo.png" alt="Microsoft" style="height: 23px;">
+            <a href="#" class="nav-link">Microsoft 365</a>
+            <a href="#" class="nav-link">Teams</a>
+            <a href="#" class="nav-link">Copilot</a>
+            <a href="#" class="nav-link">Windows</a>
+            <a href="#" class="nav-link">Surface</a>
+            <a href="#" class="nav-link">Xbox</a>
+            <a href="#" class="nav-link">Deals</a>
+            <a href="#" class="nav-link">Small Business</a>
+            <a href="#" class="nav-link">Support</a>
+        </nav>
+        <nav class="nav-right">
+            <div class="search">
+                <p> All Microsoft </p>
+            </div>
+            <div class="cart-icon">
+                <a href="#" class="nav-link">Cart</a>
+                <img src="toppart/cart.png" alt="cart" class="cartpng" style="width: 15px;">
+            </div>
+            <a href="#" class="sign-in-btn">
+                <span class="user-icon">
+                    <img src="toppart/signin.png" alt="User" style="width: 20px; height: 20px;">
+                </span>
+                Sign in
+            </a>
+        </nav>
+    </header>
+
+    <div class="payment-banner">
+        Pay your way, with flexible payment options available at checkout. <a href="#">Learn more ></a>
+    </div>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Meet Surface Pro</h1>
+            <p>This laptop's unrivalled flexibility and AI features like Live Captions and Copilot enable you to do more than you ever imagined.</p>
+            <a href="#" class="shop-now-btn">Shop now</a>
+        </div>
+    </section>
+
+    <div class="carousel-nav">
+        <img src="img/strelkki.jpg" alt="Carousel Navigation" class="carousel-img">
+    </div>
+    
+
+    <nav class="category-nav">
+        <a href="#" class="category-item">
+            <img src="icons/icon1.png" alt="Surface devices" class="category-icon">
+            <span>Shop Surface devices</span>
+        </a>
+        <a href="#" class="category-item">
+            <img src="icons/icon2.png" alt="Xbox" class="category-icon">
+            <span>Shop Xbox games and consoles</span>
+        </a>
+        <a href="#" class="category-item">
+            <img src="icons/icon3.png" alt="Accessories" class="category-icon">
+            <span>Shop for accessories</span>
+        </a>
+        <a href="#" class="category-item">
+            <img src="icons/icon4.png" alt="Business" class="category-icon">
+            <span>Shop for your business</span>
+        </a>
+        <a href="#" class="category-item">
+            <img src="icons/icon5.png" alt="PC" class="category-icon">
+            <span>Find your next PC</span>
+        </a>
+        <a href="#" class="category-item">
+            <img src="icons/icon6.png" alt="Microsoft 365" class="category-icon">
+            <span>Choose your Microsoft 365</span>
+        </a>
+    </nav>
+
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="contentcards/1cc.jpeg" alt="Surface Laptop">
+            <h3>Surface Laptop, Copilot+ PC</h3>
+            <p>Unlock AI features like Live Captions and Copilot with this exceptionally powerful laptop.</p>
+            <div class="button-container">
+                <a href="#" class="shop-now-btn">Shop now</a>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="contentcards/2cc.jpeg" alt="Xbox Series S">
+            <h3>Xbox Series S</h3>
+            <p>Next-gen performance in the smallest Xbox ever.</p>
+            <div class="button-container">
+                <a href="#" class="shop-now-btn">Shop Xbox Series S</a>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="contentcards/3cc.png" alt="Xbox controllers">
+            <h3>Xbox controllers</h3>
+            <p>Elite, wireless, adaptive—find the controller that fits your style of play.</p>
+            <div class="button-container">
+                <a href="#" class="shop-now-btn">Shop now</a>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="contentcards/4cc.png" alt="Developer Direct">
+            <h3>Xbox presents Developer_Direct</h3>
+            <p>Tune in January 23 at 10 AM PT to hear directly from the developers.</p>
+            <div class="button-container">
+                <a href="#" class="shop-now-btn">Learn more</a>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
