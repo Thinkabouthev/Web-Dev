@@ -11,3 +11,4 @@ import {ReversePipe} from './reverse.pipe';
 export class AppComponent {
   word = 'You are a champion';
 }
+
