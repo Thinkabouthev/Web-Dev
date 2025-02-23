@@ -1,0 +1,11 @@
+<div class="categories">
+  <button *ngFor="let category of categories" 
+          (click)="selectCategory(category)">
+    {{ category.name }}
+  </button>
+</div>
+
+<product-list *ngIf="selectedCategory" 
+              [products]="selectedCategory.products"
+              (removeProduct)="removeProduct($event)">
+</product-list>

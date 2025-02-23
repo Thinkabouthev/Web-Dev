@@ -1,0 +1,21 @@
+<div class="product-card">
+    <div class="image-container">
+      <button class="arrow left" (click)="prevImage()">‹</button>
+      <img [src]="product.images[product.currentImageIndex]" [alt]="product.name" class="product-image">
+      <button class="arrow right" (click)="nextImage()">›</button>
+    </div>
+  
+    <h2>{{ product.name }}</h2>
+    <p class="description">{{ product.description }}</p>
+    <p class="rating">Рейтинг: <b>{{ product.rating }} ⭐</b></p>
+  
+    <button class="kaspi-button" (click)="openKaspi()">Перейти на Kaspi</button>
+  
+    <div class="actions">
+      <button class="like-btn" (click)="likeProduct()">❤️ {{ product.likes }}</button>
+      <button class="whatsapp-btn" (click)="shareWhatsApp()">Share on WhatsApp</button>
+      <button class="telegram-btn" (click)="shareTelegram()">Share on Telegram</button>
+      
+    </div>
+  </div>
+  
