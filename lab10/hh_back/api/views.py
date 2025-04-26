@@ -13,6 +13,7 @@ class CompanyListCreateAPIView(generics.ListCreateAPIView):
 class CompanyDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Company.objects.all()
     serializer_class = CompanyModelSerializer
+    lookup_field = 'id'
 
 
 @api_view(['GET', 'POST'])

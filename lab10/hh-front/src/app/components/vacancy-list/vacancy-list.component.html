@@ -1,0 +1,10 @@
+<h2>Vacancies</h2>
+
+<ul>
+  <li *ngFor="let vacancy of vacancies">
+    <strong>{{ vacancy.name }}</strong> — {{ vacancy.salary }}₸
+  </li>
+</ul>
+
+<p *ngIf="vacancies.length === 0">No vacancies available.</p>
+

@@ -2,12 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { Company } from '../../models/company';
 import { CompanyService } from '../../services/company.service';
 import { CommonModule, NgIf, NgFor } from '@angular/common';
+import {RouterLink, RouterModule} from '@angular/router';
 
 
 @Component({
   selector: 'app-company-list',
   standalone: true,
-  imports: [CommonModule, NgIf, NgFor],
+  imports: [CommonModule, NgIf, NgFor, RouterLink, RouterModule],
   templateUrl: './company-list.component.html',
   styleUrls: ['./company-list.component.css']
 })

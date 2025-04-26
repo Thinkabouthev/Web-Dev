@@ -11,7 +11,7 @@ export class VacancyService {
 
   constructor(private http: HttpClient) {}
 
-  getVacancies(): Observable<Vacancy[]> {
+  getVacancies(number: number): Observable<Vacancy[]> {
     return this.http.get<Vacancy[]>(this.BASE_URL);
   }
 
@@ -21,5 +21,13 @@ export class VacancyService {
 
   getTopTen(): Observable<Vacancy[]> {
     return this.http.get<Vacancy[]>(`${this.BASE_URL}top_ten/`);
+  }
+
+  createVacancy(vacancy: { name: string; salary: number; company: number | undefined }): Observable<Vacancy> {
+  return this.http.post<Vacancy>(this.BASE_URL, vacancy);
+}
+
+  deleteVacancy(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.BASE_URL}${id}/`);
   }
 }
